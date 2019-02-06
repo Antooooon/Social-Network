@@ -1,0 +1,46 @@
+.allMesenger{
+    width: 960px;
+    margin: 0 auto;
+}
+.mesengers{
+    display:grid;
+    grid-template-columns: 350px 1fr;
+    
+}
+.names div{
+    padding: 15px;
+    color:white;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+   
+}
+.names a{
+    text-decoration: none;
+    color:black;
+}
+.mesanger li{
+    padding: 25px;
+    color:firebrick;
+    font-size: 20px;
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.mesanger{
+    border: 1px solid black;
+}
+.human{
+    border: 1px solid black;
+}
+.names img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    float: left;
+  
+}
+.dialogs{
+    text-align: right;
+    
+    margin-top: 20px;
+    
+}

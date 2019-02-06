@@ -1,0 +1,98 @@
+.content{
+    width:100%;
+    background-color: #F0F2F7;
+}
+.fon{
+   width:900px;
+   height:300px;
+   margin:  0 auto;
+   background: url(../img/fon.jpg) no-repeat center center fixed;
+  background-position: initial;
+  text-align: center;
+}
+
+.ava img{
+    width:200px;
+    height:200px;
+    border: 3px solid white;
+position: relative;
+top:200px;
+right:280px;
+}
+.next{
+    width:900px;
+    margin:  0 auto;
+    
+}
+.name{
+    position:relative;
+    left:310px;
+    top:30px;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.hr{
+    height: 1px;
+    border: 1px solid rgb(168, 166, 166);
+    color:#E1E1E1;
+   margin-top: 80px;
+}
+.about{
+    width: 300px;
+    height: 300px;
+    background-color:#E1E1E1;
+    float: left;
+}
+.introduction{
+    text-align: center;
+    font-size: 25px;
+    color:black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.hr1{
+    height: 1px;
+    border: 1px solid rgb(168, 166, 166);
+    color:#E1E1E1;
+   
+}
+.pol{
+    font-size: 20px;
+    margin-left: 60px;
+    color:black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px;
+}
+.age{
+    font-size: 20px;
+    margin-left: 60px;
+    color:black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px;
+}
+.country{
+    font-size: 20px;
+    margin-left: 60px;
+    color:black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px;
+}
+.city{
+    font-size: 20px;
+    margin-left: 60px;
+    color:black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px;
+}
+.brithday{
+    font-size: 20px;
+    margin-left: 60px;
+    color:black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px;
+}
+.posts{
+    width: 100%;
+}
+.button{
+    text-align: right;
+}

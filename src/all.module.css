@@ -1,0 +1,38 @@
+.header{
+   grid-area: header;
+   background-color: #304159; 
+}
+.menu{
+    grid-area: menu;
+    background-color: #F0F2F7; 
+ }
+ .content{
+    grid-area: content;
+    background-color: #F0F2F7; 
+ }
+ .footer{
+    grid-area: footer;
+    background-color: darkgrey; 
+ }
+ .conteiner{
+     display: grid;
+     grid-template-areas: "header header"
+                          "menu content"
+                          "footer footer";
+    grid-template-columns: 380px 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    min-height: 100vh;
+ }
+ @media screen and (max-width:860px){
+     .conteiner{
+         grid-template-areas: 
+                             "header"
+                             "menu"
+                             "content"
+                             "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: 80px 0px 1fr 80px;
+        
+     }
+
+ }
