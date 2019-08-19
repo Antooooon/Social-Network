@@ -2,16 +2,9 @@ import React from 'react';
 import s from './menu.module.css';
 import { NavLink } from 'react-router-dom';
 
-export default class Menu extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-
-        }
-    }
-    render() {
-        
-        let friends = this.props.friends.friendsAva.map((item)=>{return(<div className={s.someFriends}>{item}</div>)
+const Menu =(props)=>{
+   
+        let friends = props.friends.map((item)=>{return(<div className={s.someFriends}>{item}</div>)
 
     })
         return (
@@ -22,6 +15,9 @@ export default class Menu extends React.Component {
                     <img className={s.icon} src={require('../img/music.png')} /><div> <NavLink to="/music">Music</NavLink></div>
                     <img className={s.icon} src={require('../img/photo.png')} />  <div> <NavLink to="/photo">Photo</NavLink></div>
                     <img className={s.icon} src={require('../img/news.png')} /> <div> <NavLink to="/news">News</NavLink></div>
+                    <img className={s.icon} src={require('../img/news.png')} /> <div> <NavLink to="/friends">Friends</NavLink></div>
+                    <img className={s.icon} src={require('../img/news.png')} /> <div> <NavLink to="/login">Login</NavLink></div>
+
                     <br /> <br /><br />
                     <img className={s.icon} src={require('../img/settings.png')} /> <div> <NavLink to="/settings">Settings</NavLink></div>
                     <br /> <br /><br />
@@ -36,5 +32,8 @@ export default class Menu extends React.Component {
                 </nav>
             </div>
         )
-    }
+    
 }
+export default Menu;
+   
+  

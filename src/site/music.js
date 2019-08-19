@@ -1,19 +1,24 @@
 import React from 'react';
-import mesenger from './mesenger.module.css';
 
-export default class Mesenger extends React.Component{
-    constructor(props){
-        super();
-        this.state ={
+    const Music = (props)=>{
+let music = props.playlist.map((item)=>{return(<div>{item}</div>)    })
 
-        }
-    }
-    render(){
-        return(
-            <div>
-         Music
-
-            </div>
-        )
-    }
+const newText = React.createRef();
+let addSong = ()=>{
+    props.songs()
 }
+let addText = ()=>{
+    let text = newText.current.value;
+    props.texta(text)
+}
+return(
+    <div>
+    <textarea ref={newText} onChange={addText} value={props.text} ></textarea>
+    <button type="button"  className="btn btn-success" onClick={addSong}>Success</button>
+
+{music}
+       </div>
+   
+)
+    }
+    export default Music;

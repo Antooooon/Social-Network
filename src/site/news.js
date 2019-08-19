@@ -1,19 +1,12 @@
 import React from 'react';
-import mesenger from './mesenger.module.css';
 
-export default class Mesenger extends React.Component{
-    constructor(props){
-        super();
-        this.state ={
+    const News = ()=>{
+return(
+    <div>
+    News
 
-        }
+       </div>
+   
+)
     }
-    render(){
-        return(
-            <div>
-         Posts
-
-            </div>
-        )
-    }
-}
+    export default News;

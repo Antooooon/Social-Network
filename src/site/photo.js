@@ -1,19 +1,12 @@
 import React from 'react';
-import s from './photo.module.css';
 
-export default class Phtoto extends React.Component{
-    constructor(props){
-        super();
-        this.state ={
+    const Photo = ()=>{
+return(
+    <div>
+    Photo
 
-        }
+       </div>
+   
+)
     }
-    render(){
-        return(
-            <div>
-        Photo
-
-            </div>
-        )
-    }
-}
+    export default Photo;

@@ -1,8 +1,6 @@
 import React from 'react';
 import s from './mesenger.module.css';
 import { NavLink } from 'react-router-dom';
-import PropTypes from 'prop-types';
-
 const Component = (props) => {
     let porpsId = "/mesenger/" + props.id;
 
@@ -13,19 +11,7 @@ const Component = (props) => {
         </div>
     )
 }
-Component.PropTypes = {
-    name: PropTypes.string.isRequired,
-    id: PropTypes.number,
-    avatar: PropTypes.string,
-    key: PropTypes.number,
 
-
-}
-Component.defaultProps = {
-    name: "Please enter your name",
-
-
-}
 
 
 const Mess = (props) => {
@@ -41,7 +27,6 @@ const Mess = (props) => {
 
 
 const Mesenger = (props)=>{
-    
     const newMessage = React.createRef();
     let addMessage = ()=>{
     props.addMessage();

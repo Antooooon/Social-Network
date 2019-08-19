@@ -1,8 +1,14 @@
-import Func from './site/State/state';
-import {addPost} from './site/State/state';
-import {ready} from './site/render';
-import {setText} from './site/State/state';
-import {addMessage} from './site/State/state';
-import {setMessage} from './site/State/state';
+import Store from './site/State/redux-store';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import All from './all.js';
+import {Provider} from "react-redux";
 
-ready(Func,addPost,setText,addMessage,setMessage);
+
+    ReactDOM.render(
+        <Provider store={Store}>
+        <All/>
+        </Provider>
+        , document.getElementById('root'));
+
+

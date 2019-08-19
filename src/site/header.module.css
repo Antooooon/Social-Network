@@ -7,14 +7,22 @@
 }
 .reg{
     margin-left:20px;
-    margin-right: 150px;
+    margin-right: 20px;
     text-align: right;
     float: right;
     padding: 10px;
+    color: rgb(198, 240, 159);
 }
 .sign{
   
     text-align: right;
-    
+    color: rgb(198, 240, 159);
     padding: 10px;
+}
+.photo{
+    margin-right: 100px;
+  
+    
+    float: right;
+    
 }
