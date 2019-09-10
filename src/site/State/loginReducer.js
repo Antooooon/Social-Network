@@ -8,6 +8,7 @@ export const setAboutProfile = photos => ({
   type: SETUSERPHOTO,
   photos
 });
+
 const SETUSERDATA = "USER_ID";
 const SETUSERPHOTO = "USER_PHOTO";
 
@@ -16,7 +17,7 @@ let initialState = {
   id: null,
   login: null,
   photo: "",
-  auth: null
+ 
 };
 
 let loginReducer = (state = initialState, action) => {
@@ -27,7 +28,7 @@ let loginReducer = (state = initialState, action) => {
         email: action.data.email,
         login: action.data.login,
         id: action.data.id,
-        auth: true
+       
       };
     }
     case SETUSERPHOTO: {
@@ -36,6 +37,7 @@ let loginReducer = (state = initialState, action) => {
         photo: action.photos
       };
     }
+  
 
     default:
       return state;

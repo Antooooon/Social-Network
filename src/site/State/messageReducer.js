@@ -1,10 +1,7 @@
-export const addMessage = () => ({ type: addmessage });
-export const setMessage = text => ({
-  type: setmessage,
-  TextMessage: text
-});
+export const addMessage = (textMessage) => ({ type: addmessage ,textMessage});
+
 const addmessage = "ADD_MESSAGE";
-const setmessage = "SET_MESSAGE";
+
 let initialState = {
   objName: [
     { name: "Kirill", id: 1, ava: "ava1" },
@@ -26,7 +23,7 @@ let messageReducer = (state = initialState, action) => {
   switch (action.type) {
     case addmessage:
       let obj = {
-        mes: state.newText
+        mes: action.textMessage
       };
       return {
         ...state,
@@ -34,11 +31,7 @@ let messageReducer = (state = initialState, action) => {
         newText: ""
       };
 
-    case setmessage:
-      return {
-        ...state,
-        newText: action.TextMessage
-      };
+  
 
     default:
       return state;

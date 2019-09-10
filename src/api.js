@@ -52,7 +52,8 @@ getStatus(userId){
   })
 },
 setStatus(textStatus){
-  return instance.put(`profile/status`,{status:textStatus}).then(response=>{
+  return instance.put(`profile/status`,{status:textStatus})
+  .then(response=>{
     return response.data;
   })
 },
@@ -61,8 +62,9 @@ dataApiLogin(){
     return response.data;
   })
 },
-authApiLogin(){
-  return instance.post(`/auth/login`).then(response=>{
+authApiLogin(email,password,rememberMe){
+  return instance.post(`/auth/login`,{email:email,password:password,rememberMe:rememberMe})
+  .then(response=>{
     return response.data;
   })
 },

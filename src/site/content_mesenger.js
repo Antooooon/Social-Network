@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   addMessage,
-  setMessage
+  
 } from "./State/messageReducer";
 import Mesenger from "./mesenger";
 import { connect } from "react-redux";
@@ -41,7 +41,7 @@ const MapStateToProps = store => {
 export default compose(
    connect(
     MapStateToProps,{
-      addMessage,setMessage
+      addMessage
     }
   ),
   hocComponent,

@@ -1,0 +1,13 @@
+.error input
+{
+    border: solid red 2px;
+}
+.spanik{
+    color:red;
+}
+
+.stopSubmit{
+    padding: 10px;
+    border: 1px solid red;
+
+}

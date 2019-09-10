@@ -4,18 +4,20 @@ import Content from "./content";
 import { withRouter } from "react-router-dom";
 import {
   addPosts,
-  setTexts,
   postThunk,
   statusThunk,
   setStatusThunk,
 } from "./State/postReducer";
 import { hocComponent } from "../site/hoc/hoc";
 import { compose } from "redux";
+import { getPosts } from "./State/Selectors/selector";
 
 class Conteiner extends React.Component {
   componentDidMount() {
     let userId = this.props.match.params.userId;
+    
     if (!userId) {
+      
       userId = 1247;
     }
     this.props.postThunk(userId);
@@ -25,7 +27,8 @@ class Conteiner extends React.Component {
   render() {
     return (
       <div>
-        <Content {...this.props} status={this.props.status} setStatusAC={this.props.setStatusThunk} />
+        <Content {...this.props} status={this.props.status} 
+        setStatusAC={this.props.setStatusThunk} />
       </div>
     );
   }
@@ -33,7 +36,7 @@ class Conteiner extends React.Component {
 }
 let mapStateToProps = store => ({
   profile: store.postPage.profile,
-  posts: store.postPage.arrPosts,
+  posts: getPosts(store),
   text: store.postPage.newText,
   photos: store.postPage.photos,
   contacts: store.postPage.contacts,
@@ -44,7 +47,7 @@ let mapStateToProps = store => ({
 export default compose(
   connect(
     mapStateToProps,
-    { postThunk, addPosts, setTexts, statusThunk,setStatusThunk }
+    { postThunk, addPosts, statusThunk,setStatusThunk }
   ),
   hocComponent,
   withRouter

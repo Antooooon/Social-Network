@@ -9,6 +9,7 @@ const MapStateToProps = (state)=>{
  text:state.musicPage.newText,
     }
 }
+
 export default compose (
     connect(MapStateToProps,{songs,texta}),
     hocComponent)(Music);

@@ -8,6 +8,7 @@ import loginReducer from "./loginReducer";
 import thunkMiddleWare from "redux-thunk";
 import authReducer from "./auth";
 import {reducer as formReducer} from "redux-form";
+import  appReducer  from "./appReducer";
 
 let rootReducer = combineReducers({
     postPage:postReducer,
@@ -18,6 +19,7 @@ let rootReducer = combineReducers({
     login:loginReducer,
     auth:authReducer,
     form:formReducer,
+    app:appReducer,
     
 });
 let store = createStore(rootReducer,applyMiddleware(thunkMiddleWare));

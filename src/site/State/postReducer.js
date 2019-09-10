@@ -1,7 +1,6 @@
 import React from 'react';
 import {useApi} from "../../api";
-export  const addPosts = () => ({type:addpost});
-export const setTexts=(textPost)=>({type:addposttext,textPost:textPost});
+export  const addPosts = (textPost) => ({type:addpost,textPost});
 export const setAboutProfile = (userData) => ({type:profile,userData});
 export const setPhotosProfile = (photos) => ({type:photo,photos});
 export const setContactsProfile = (contacts) => ({type:contact,contacts});
@@ -36,9 +35,7 @@ let postReducer = (state = initialState,action)=>{
             data: "10 junary 2019",
             like: 0,
             ava: <img src={require('../../img/ava.jpg')} />,
-        
-
-            post1: state.newText,
+            post1: action.textPost,
             likeImg: <img src={require('../../img/like.png')} />
         }
  
@@ -50,14 +47,7 @@ let postReducer = (state = initialState,action)=>{
         };
         
     }
-    case addposttext:{
-        return{
-            ...state,
-            newText:action.textPost,
-        };
-        
-   
-    }
+  
     case photo:{
         return{
             ...state,

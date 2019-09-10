@@ -18,7 +18,7 @@ let MapStateToProps = store => {
     id: store.login.id,
     email: store.login.email,
     login: store.login.login,
-    auth: store.login.auth,
+    auth: store.auth.isAuth,
     photo: store.login.photo
   };
 };

@@ -3,6 +3,7 @@ import s from "./content.module.css";
 import Posts from "./Posts/post";
 import { NavLink } from "react-router-dom";
 import Status from "./statusComponent";
+import {Field,reduxForm} from "redux-form";
 const Content = props => {
   let array = props.posts.map(item => {
     return (
@@ -19,14 +20,10 @@ const Content = props => {
     );
   });
 
-  const newPost = React.createRef();
-  let addPosts = () => {
-    props.addPosts();
-  };
-  let setTexts = () => {
-    let text = newPost.current.value;
-    props.setTexts(text);
-  };
+  const dataForm = (data)=>{
+    props.addPosts(data.newPost)
+  }
+
   let names = "";
   if (!props.profile.fullName) {
     names = "Anton Kliachonak";
@@ -66,33 +63,35 @@ const Content = props => {
           </div>
         </div>
 
-        <div className={s.posts} class="col-md-8">
-          <div className="form-group green-border-focus">
-            <label for="exampleFormControlTextarea5">New Post</label>
+       <PostReduxForm onSubmit={dataForm} />
 
-            <textarea
-              ref={newPost}
-              className="form-control"
-              id="exampleFormControlTextarea5"
-              rows="3"
-              onChange={setTexts}
-              value={props.text}
-            />
-          </div>
-          <div className={s.button}>
-            <button
-              type="button"
-              onClick={addPosts}
-              className="btn btn-success"
-            >
-              Add
-            </button>
-          </div>
-
-          {array}
-        </div>
+       <div className={s.posts} class="col-md-8">
+       {array}
+       </div>
       </div>
     </div>
   );
 };
 export default Content;
+
+
+const postForm = (props)=>{
+  return(
+    <form onSubmit={props.handleSubmit}>
+    <div className={s.posts} class="col-md-8">
+              <div className="form-group green-border-focus">
+                <label for="exampleFormControlTextarea5">New Post</label>
+      <Field  id="exampleFormControlTextarea5"    rows="3"
+      className="form-control" component ="textarea" name="newPost" />
+              </div>
+              <div className={s.button}>
+               <button className="btn btn-success" type={"submit"}>Send</button>
+              </div> 
+             
+            </div>
+      </form>
+  )
+}
+const PostReduxForm = reduxForm(
+  {form:"post"}
+)(postForm);
